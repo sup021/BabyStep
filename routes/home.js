@@ -1,7 +1,7 @@
 /*
- * GET temporary page.
+ * GET home page.
  */
 
 exports.view = function (req, res) {
-    res.render('temp');
+    res.render('home');
 };
