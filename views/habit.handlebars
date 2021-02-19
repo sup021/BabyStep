@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Habit Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+	<link href="/css/habit.css" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/introHCI.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="top">
+			<h1 class="pageName">HABIT</h1>
+			<button type="button" class="btn plus">
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+			</button>
+			<hr>
+		</div>
+
+		{{#each habitbox}}
+		<div class="habitbox" id="{{id}}">
+			<div class="thumbnail">
+				<h2 class="habitName">Habit #{{id}}</h2>
+				<button type="button" class="btn threedots">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+						class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+						<path
+							d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+					</svg>
+				</button>
+				<h3 class="babystep">- Baby step #{{id}}</h3>
+				<div class="chain">
+					<span class="date">1</span>
+					<span class="date">2</span>
+					<span class="date">3</span>
+					<span class="date">4</span>
+					<span class="date">5</span>
+					<span class="date">6</span>
+					<span class="date">7</span>
+				</div>
+				<div class="reminder">12 : 00 PM</div>
+			</div>
+		</div>
+		{{/each}}
+
+		<nav class="navbar fixed-bottom navbar-light bg-light">
+			<hr>
+			<div class="bottom">
+				<a class="navbar-brand" id="1" href="#">HOME</a>
+				<a class="navbar-brand" id="2" href="#">HABIT</a>
+				<a class="navbar-brand" id="3" href="#">SETTING</a>
+			</div>
+		</nav>
+	</div>
+</body>
+
+</html>
