@@ -8,10 +8,13 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
-var habit = require('./routes/habit');
-var createHabit = require('./routes/createHabit');
-var habitDetails = require('./routes/habitDetails');
+var onboarding = require('./routes/onboarding');
+var signIn = require('./routes/signIn');
+var signUp = require('./routes/signUp');
 var home = require('./routes/home');
+var habit = require('./routes/habit');
+var habitDetails = require('./routes/habitDetails');
+var createHabit = require('./routes/createHabit');
 var setting = require('./routes/setting');
 // Example route
 // var user = require('./routes/user');
@@ -38,8 +41,12 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', habit.view);
+app.get('/', onboarding.view);
+app.get('/signIn', signIn.view);
+app.get('/signUp', signUp.view);
+app.get('/habit', habit.view);
 app.get('/createHabit', createHabit.view);
+app.get('/createHabit/success', createHabit.create)
 app.get('/habitDetails', habitDetails.view);
 app.get('/home', home.view);
 app.get('/setting', setting.view);

@@ -6,11 +6,36 @@
     <title>Setting Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/setting.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
+    <script src="/js/setting.js"></script>
 </head>
 
 <body>
-    <h1>Setting Page</h1>
-    <a href="http://babystep-test.herokuapp.com">Go Back</a>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container-fluid top">
+                <a class="navbar-brand" href="#" style="color: white;">SETTING</a>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-fixed-bottom navbar-inverse">
+            <div class="container-fluid bottom">
+                <a class="navbar-brand" id="1" href="http://localhost:3000/home" style="color: white;">HOME</a>
+                <a class="navbar-brand" id="2" href="http://localhost:3000/habit" style="color: white;">HABIT</a>
+                <a class="navbar-brand" id="3" href="http://localhost:3000/setting" style="color: white;">SETTING</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container buttons">
+        <button class="help" type="button" onclick="location.href='http://localhost:3000/habit'">HELP</button>
+        <button class="signOut" type="button" onclick="location.href='http://localhost:3000/'">SIGN OUT</button>
+    </div>
 </body>
 
 </html>

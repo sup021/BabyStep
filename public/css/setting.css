@@ -1,0 +1,23 @@
+.bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.buttons {
+    min-height: 80vh;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: auto;
+    padding: 15px;
+    width: 70vw;
+}

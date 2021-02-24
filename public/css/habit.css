@@ -1,13 +1,15 @@
-h1.pageName {
-    display: inline-block;
-    margin-left: 10px;
+.bottom {
+    display: flex;
+    justify-content: space-around;
 }
 
-button.plus {
-    display: inline-block;
-    float: right;
-    margin: 10px;
-    margin-top: 20px;
+body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+ul.dropdown {
+    list-style-type: none;
 }
 
 h2.habitName {
@@ -44,9 +46,4 @@ div.reminder {
     border-radius: 30%;
     margin: 20px;
     margin-left: 10px;
-}
-
-div.bottom {
-    display: flex;
-    justify-content: space-around;
 }

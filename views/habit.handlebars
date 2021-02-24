@@ -8,29 +8,41 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="/css/introHCI.css" rel="stylesheet">
 	<link href="/css/habit.css" rel="stylesheet">
-
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
 	<script src="/js/habitBack.js"></script>
 </head>
 
 <body>
-	<div class="container">
-		<div class="top">
-			<h1 class="pageName">HABIT</h1>
-			<button onclick="location.href='http://babystep-test.herokuapp.com/createHabit'" type="button"
-				class="btn plus">
-				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-			</button>
-			<hr>
-		</div>
+	<header>
+		<nav class="navbar navbar-fixed-top navbar-inverse">
+			<div class="container-fluid top">
+				<a class="navbar-brand" href="#" style="color: white;">HABIT</a>
+				<button class="btn navbar-toggle navbar-right" type="button"
+					onclick="location.href='http://localhost:3000/createHabit'">
+					<span style="color: white">
+						<i class="fas fa-plus"></i>
+					</span>
+				</button>
+			</div>
+		</nav>
 
-		{{#each habitbox}}
-		<div class="habitbox" id="{{id}}">
+		<nav class="navbar navbar-fixed-bottom navbar-inverse">
+			<div class="container-fluid bottom">
+				<a class="navbar-brand" id="1" href="http://localhost:3000/home" style="color: white;">HOME</a>
+				<a class="navbar-brand" id="2" href="http://localhost:3000/habit" style="color: white;">HABIT</a>
+				<a class="navbar-brand" id="3" href="http://localhost:3000/setting" style="color: white;">SETTING</a>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container">
+		{{#each habitData}}
+		<div class="habitbox" id="{{hname}}">
 			<div class="thumbnail">
-				<h2 class="habitName">Habit #{{id}}</h2>
+				<h2 class="habitName">{{hname}}</h2>
 				<button onclick="location.href='http://babystep-test.herokuapp.com/habitDetails'" type="button"
 					class="btn threedots">
 					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -39,7 +51,7 @@
 							d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
 					</svg>
 				</button>
-				<p class="babystep">- Baby step #{{id}}</p>
+				<p class="babystep">- {{step}}</p>
 				<div class="chain">
 					<span class="date">1</span>
 					<span class="date">2</span>
@@ -49,19 +61,10 @@
 					<span class="date">6</span>
 					<span class="date">7</span>
 				</div>
-				<div class="reminder">12 : 00 PM</div>
+				<div class="reminder">{{time}}</div>
 			</div>
 		</div>
 		{{/each}}
-
-		<nav class="navbar fixed-bottom navbar-light bg-light">
-			<hr>
-			<div class="bottom">
-				<a class="navbar-brand" id="1" href="http://babystep-test.herokuapp.com/home">HOME</a>
-				<a class="navbar-brand" id="2" href="http://babystep-test.herokuapp.com/">HABIT</a>
-				<a class="navbar-brand" id="3" href="http://babystep-test.herokuapp.com/setting">SETTING</a>
-			</div>
-		</nav>
 	</div>
 </body>
 

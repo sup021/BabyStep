@@ -8,95 +8,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="/css/introHCI.css" rel="stylesheet">
     <link href="/css/createHabit.css" rel="stylesheet">
-
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
     <script src="/js/createHabitBack.js"></script>
-
-    <style>
-        .btn {
-            border: none;
-            background-color: inherit;
-            padding: 14px 28px;
-            font-size: 16px;
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background: #eee;
-        }
-
-        .success {
-            color: green;
-        }
-
-        .info {
-            color: dodgerblue;
-        }
-
-        .warning {
-            color: orange;
-        }
-
-        .danger {
-            color: red;
-        }
-
-        .default {
-            color: black;
-        }
-    </style>
 </head>
 
-
 <body>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container-fluid top">
+                <a class="navbar-brand" href="#" style="color: white;">CREATE HABIT</a>
+                <button class="btn navbar-toggle navbar-right" type="button"
+                    onclick="location.href='http://localhost:3000/habit'">
+                    <span style="color: white">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
     <div class="container">
-        <div class="top">
-            <h1 class="pageName">CREATE HABIT</h1>
-            <button onclick="location.href='http://babystep-test.herokuapp.com/'" type="button" class="close">
-                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-            </button>
-            <hr>
-        </div>
-
-        <form name="form1" action="#" onsubmit="required()">
-            <label for="hname">
-                <h2>Habit Name:</h2>
-            </label>
-            <br>
-            <input type='text' name='hname'>
-            <br>
-            <label for="htype">
-                <h2>First Baby Step:</h2>
-            </label>
-            <br>
-            <input type="text" name="step">
-            <br>
-            <label for="hocc">
-                <h2>Occurence:</h2>
-            </label>
-            <br>
-            <button class="day" clicked=false type="button" name="option1">Mon</button>
-            <button class="day" clicked=false type="button" name="option2">Tue</button>
-            <button class="day" clicked=false type="button" name="option3">Wed</button>
-            <button class="day" clicked=false type="button" name="option4">Thurs</button>
-            <button class="day" clicked=false type="button" name="option5">Fri</button>
-            <button class="day" clicked=false type="button" name="option6">Sat</button>
-            <button class="day" clicked=false type="button" name="option7">Sun</button>
-            <br>
-            <label for="htime">
-                <h2>Remind me at:</h2>
-            </label>
-            <br>
-            <input type="time" name="appt">
-            <br>
-            <input class="create" type="submit" name="submit" value="CREATE">
+        <form id="createHabitForm" role="form" method="get" action="/createHabit/success">
+            <div class="form-group">
+                <label for="hname">
+                    <h2>Habit Name:</h2>
+                </label>
+                <input type='text' class="form-control" id="hname" placeholder="ex) Running" name='hname'>
+            </div>
+            <div class="form-group">
+                <label for="step">
+                    <h2>First Baby Step:</h2>
+                </label>
+                <input type="text" class="form-control" id="step" placeholder="ex) 5 minute walking" name="step">
+            </div>
+            <div class="form-group">
+                <label for="occ">
+                    <h2>Occurence:</h2>
+                </label>
+                <div class="days">
+                    <button class="btn day" id="mon" type="button" clicked=false>Mon</button>
+                    <button class="btn day" id="tue" type="button" clicked=false>Tue</button>
+                    <button class="btn day" id="wed" type="button" clicked=false>Wed</button>
+                    <button class="btn day" id="thurs" type="button" clicked=false>Thurs</button>
+                    <button class="btn day" id="fri" type="button" clicked=false>Fri</button>
+                    <button class="btn day" id="sat" type="button" clicked=false>Sat</button>
+                    <button class="btn day" id="sun" type="button" clicked=false>Sun</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="time">
+                    <h2>Remind me at:</h2>
+                </label>
+                <input type="time" name="time">
+            </div>
+            <input class="btn" id="createBtn" type="submit" name="create" value="CREATE">
         </form>
-
     </div>
 
 </body>

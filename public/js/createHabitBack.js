@@ -26,24 +26,32 @@ function clickWeekBtn(result) {
 }
 
 function required() {
-    var name = document.form1.hname.value;
-    var step = document.form1.step.value;
-    var occ = ($(document.form1.option1).attr('clicked') == "true")
-        || ($(document.form1.option2).attr('clicked') == "true")
-        || ($(document.form1.option3).attr('clicked') == "true")
-        || ($(document.form1.option4).attr('clicked') == "true")
-        || ($(document.form1.option5).attr('clicked') == "true")
-        || ($(document.form1.option6).attr('clicked') == "true")
-        || ($(document.form1.option7).attr('clicked') == "true");
+    var createBtn = document.getElementById("createBtn");
+    createBtn.addEventListener("click", check);
+}
 
-    var remind = document.form1.appt.value
-
-    if (name != "" && step != "" && occ == true && remind != "") {
-        alert('Habit has been created');
-        return false;
-    }
-    else {
-        alert("Please input a Value");
-        return true;
-    }
+function check() {
+    var hname = document.getElementById("hname").value;
+    console.log(hname);
+    var step = document.getElementById("step").value;
+    console.log(step);
+    var occ = {
+        "mon": $("#mon").attr("clicked"),
+        "tue": $("#tue").attr("clicked"),
+        "wed": $("#wed").attr("clicked"),
+        "thurs": $("#thurs").attr("clicked"),
+        "fri": $("#fri").attr("clicked"),
+        "sat": $("#sat").attr("clicked"),
+        "sun": $("#sun").attr("clicked")
+    };
+    console.log(occ);
+    var time = document.getElementById("time").value;
+    console.log(time);
+    var newHabit = {
+        "id": hname,
+        "step": step,
+        "occ": occ,
+        "time": time
+    };
+    habitData.habitData.push(newHabit);
 }
