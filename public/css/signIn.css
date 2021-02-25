@@ -1,0 +1,9 @@
+body {
+    padding-top: 70px;
+}
+
+input#signIn {
+    background: rgb(19, 18, 18);
+    color: white;
+    margin-top: 50px;
+}

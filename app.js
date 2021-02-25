@@ -11,11 +11,11 @@ var handlebars = require('express3-handlebars')
 var onboarding = require('./routes/onboarding');
 var signIn = require('./routes/signIn');
 var signUp = require('./routes/signUp');
-var home = require('./routes/home');
 var habit = require('./routes/habit');
 var habitDetails = require('./routes/habitDetails');
 var createHabit = require('./routes/createHabit');
 var setting = require('./routes/setting');
+var help = require('./routes/help');
 // Example route
 // var user = require('./routes/user');
 
@@ -48,8 +48,9 @@ app.get('/habit', habit.view);
 app.get('/createHabit', createHabit.view);
 app.get('/createHabit/success', createHabit.create)
 app.get('/habitDetails', habitDetails.view);
-app.get('/home', home.view);
+app.get('/habitDetails/change', habitDetails.change);
 app.get('/setting', setting.view);
+app.get('/help', help.view);
 
 // Example route
 // app.get('/users', user.list);

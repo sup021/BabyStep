@@ -15,16 +15,4 @@ function initializePage() {
         var getInputCheckBox = goToParent.find("input[id = " + getValue + "]");
         console.log(getInputCheckBox.attr("id"));
     });
-    requiredCB();
-}
-
-function requiredCB() {
-    var requiredCheckboxes = $('.days :checkbox[required]');
-    requiredCheckboxes.change(function () {
-        if (requiredCheckboxes.is(':checked')) {
-            requiredCheckboxes.removeAttr('required');
-        } else {
-            requiredCheckboxes.attr('required', 'required');
-        }
-    });
 }

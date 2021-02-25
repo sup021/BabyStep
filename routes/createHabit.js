@@ -10,22 +10,30 @@ exports.view = function (req, res) {
 exports.create = function (req, res) {
     var hname = req.query.hname;
     var step = req.query.step;
+    var occ = [];
     var time = req.query.time;
-    var occ = {
-        "mon": req.query.mon,
-        "tue": req.query.tues,
-        "wed": req.query.wed,
-        "thurs": req.query.thurs,
-        "fri": req.query.fri,
-        "sat": req.query.sat,
-        "sun": req.query.sun
-    };
+
+    var mon = req.query.mon;
+    var tues = req.query.tues;
+    var wed = req.query.wed;
+    var thurs = req.query.thurs;
+    var fri = req.query.fri;
+    var sat = req.query.sat;
+    var sun = req.query.sun;
+    var arr = [mon, tues, wed, thurs, fri, sat, sun];
+    for (i = 0; i < 7; i++) {
+        if (arr[i] != undefined) {
+            occ.push(arr[i]);
+        }
+    }
+
     var newHabit = {
         "hname": hname,
         "step": step,
         "occ": occ,
         "time": time
     };
+    console.log(newHabit);
     habitData.habitData.push(newHabit);
     res.render('habit', habitData);
 };

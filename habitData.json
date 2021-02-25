@@ -1,22 +1,28 @@
 {
     "habitData": [
         {
-            "id": 1
+            "hname": "Running",
+            "step": "5 minute walking",
+            "occ": [
+                "mon",
+                "wed",
+                "fri"
+            ],
+            "time": "11:30"
         },
         {
-            "id": 2
-        },
-        {
-            "id": 3
-        },
-        {
-            "id": 4
-        },
-        {
-            "id": 5
-        },
-        {
-            "id": 6
+            "hname": "Leetcode",
+            "step": "1 easy problem",
+            "occ": [
+                "mon",
+                "tues",
+                "wed",
+                "thurs",
+                "fri",
+                "sat",
+                "sun"
+            ],
+            "time": "12:00"
         }
     ]
 }

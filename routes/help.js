@@ -1,7 +1,7 @@
 /*
- * GET home page.
+ * GET help page.
  */
 
 exports.view = function (req, res) {
-    res.render('home');
+    res.render('help');
 };

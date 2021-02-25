@@ -6,11 +6,77 @@
     <title>Habit Details Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/habitDetails.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
+    <script src="/js/habitDetailsBack.js"></script>
 </head>
 
 <body>
-    <h1>Details of Habit Page</h1>
-    <a href="http://babystep-test.herokuapp.com">Go Back</a>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container-fluid top">
+                <a class="navbar-brand" href="#" style="color: white;">MODIFY HABIT</a>
+                <button class="btn navbar-toggle navbar-right" type="button"
+                    onclick="location.href='http://localhost:3000/habit'">
+                    <span style="color: white">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form id="habitDetailsForm" role="form" method="get" action="/habitDetails/success">
+            <div class="form-group">
+                <label for="hname">
+                    <h2>Habit Name:</h2>
+                </label>
+                <input type='text' class="form-control" id="hname" placeholder="ex) Running" name='hname'>
+            </div>
+            <div class="form-group">
+                <label for="step">
+                    <h2>First Baby Step:</h2>
+                </label>
+                <input type="text" class="form-control" id="step" placeholder="ex) 5 minute walking" name="step">
+            </div>
+            <div class="form-group">
+                <label for="occ">
+                    <h2>Occurence:</h2>
+                </label>
+                <div class="days">
+                    <input type="checkbox" class="form-control cb" id="mon" name="mon" value="mon">
+                    <input type="checkbox" class="form-control cb" id="tues" name="tues" value="tues">
+                    <input type="checkbox" class="form-control cb" id="wed" name="wed" value="wed">
+                    <input type="checkbox" class="form-control cb" id="thurs" name="thurs" value="thurs">
+                    <input type="checkbox" class="form-control cb" id="fri" name="fri" value="fri">
+                    <input type="checkbox" class="form-control cb" id="sat" name="sat" value="sat">
+                    <input type="checkbox" class="form-control cb" id="sun" name="sun" value="sun">
+
+                    <label for="mon">M</label>
+                    <label for="tues">Tu</label>
+                    <label for="wed">W</label>
+                    <label for="thurs">Th</label>
+                    <label for="fri">F</label>
+                    <label for="sat">Sa</label>
+                    <label for="sun">Su</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="time">
+                    <h2>Remind me at:</h2>
+                </label>
+                <input type="time" name="time">
+            </div>
+            <input class="btn" id="saveBtn" type="submit" name="save" value="SAVE">
+            <input class="btn" id="deleteBtn" type="submit" name="delete" value="DELETE">
+        </form>
+    </div>
+
 </body>
 
 </html>

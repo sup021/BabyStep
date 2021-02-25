@@ -1,5 +1,6 @@
 body {
     padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 input {
@@ -8,18 +9,6 @@ input {
 
 input:focus, textarea:focus{
     background-color: lightyellow;
-}
-
-h3.or {
-    display: grid;
-    /* align-items: center; */
-    justify-content: center;
-    margin-top: 10px;
-}
-
-input#recommend {
-    background: #999;
-    color: #ffffff;
 }
 
 .days input{
@@ -48,7 +37,7 @@ input#recommend {
   color: #ffffff;
 }
 
-#createBtn {
+#saveBtn {
     width: 60vw;
     height: 50px;
     margin: auto;
@@ -56,6 +45,14 @@ input#recommend {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(19, 18, 18);
-    color: white;
+}
+
+#deleteBtn {
+    width: 60vw;
+    height: 50px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -36,33 +36,45 @@
                 <label for="hname">
                     <h2>Habit Name:</h2>
                 </label>
-                <input type='text' class="form-control" id="hname" placeholder="ex) Running" name='hname'>
+                <input type='text' class="form-control" id="hname" placeholder="ex) Running" name='hname' required>
             </div>
             <div class="form-group">
                 <label for="step">
                     <h2>First Baby Step:</h2>
                 </label>
-                <input type="text" class="form-control" id="step" placeholder="ex) 5 minute walking" name="step">
+                <input type="text" class="form-control" id="step" placeholder="ex) 5 minute walking" name="step"
+                    required>
+                <h3 class="or">or</h3>
+                <input type="button" class="form-control" id="recommend" name="recommend" value="Recommend Step"
+                    onclick="alert('Recommend Step feature coming soon!');">
             </div>
             <div class="form-group">
                 <label for="occ">
                     <h2>Occurence:</h2>
                 </label>
                 <div class="days">
-                    <button class="btn day" id="mon" type="button" clicked=false>Mon</button>
-                    <button class="btn day" id="tue" type="button" clicked=false>Tue</button>
-                    <button class="btn day" id="wed" type="button" clicked=false>Wed</button>
-                    <button class="btn day" id="thurs" type="button" clicked=false>Thurs</button>
-                    <button class="btn day" id="fri" type="button" clicked=false>Fri</button>
-                    <button class="btn day" id="sat" type="button" clicked=false>Sat</button>
-                    <button class="btn day" id="sun" type="button" clicked=false>Sun</button>
+                    <input type="checkbox" class="form-control cb" id="mon" name="mon" value="mon" required>
+                    <input type="checkbox" class="form-control cb" id="tues" name="tues" value="tues" required>
+                    <input type="checkbox" class="form-control cb" id="wed" name="wed" value="wed" required>
+                    <input type="checkbox" class="form-control cb" id="thurs" name="thurs" value="thurs" required>
+                    <input type="checkbox" class="form-control cb" id="fri" name="fri" value="fri" required>
+                    <input type="checkbox" class="form-control cb" id="sat" name="sat" value="sat" required>
+                    <input type="checkbox" class="form-control cb" id="sun" name="sun" value="sun" required>
+
+                    <label for="mon">M</label>
+                    <label for="tues">Tu</label>
+                    <label for="wed">W</label>
+                    <label for="thurs">Th</label>
+                    <label for="fri">F</label>
+                    <label for="sat">Sa</label>
+                    <label for="sun">Su</label>
                 </div>
             </div>
             <div class="form-group">
                 <label for="time">
                     <h2>Remind me at:</h2>
                 </label>
-                <input type="time" name="time">
+                <input type="time" name="time" required>
             </div>
             <input class="btn" id="createBtn" type="submit" name="create" value="CREATE">
         </form>

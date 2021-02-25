@@ -15,19 +15,35 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container-fluid top">
+                <a class="navbar-brand" href="#" style="color: white;">BABYSTEP</a>
+                <button class="btn navbar-toggle navbar-right" type="button"
+                    onclick="location.href='http://localhost:3000/'">
+                    <span style="color: white">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>Baby Step</h1>
-        <div>
-            <h2>EMAIL:</h2>
-            <input type='text' class="form-control" id="email" placeholder="example@gmai.com" name='email'>
-        </div>
-        <div>
-            <h2>PASSWORD:</h2>
-            <input type="text" class="form-control" id="password" placeholder="abc123!@#" name="password">
-        </div>
-        <button type="button" onclick="location.href='http://localhost:3000/signIn'">
-            SIGN UP
-        </button>
+        <h1>SIGN UP</h1>
+        <form action="/habit">
+            <div>
+                <h2>EMAIL:</h2>
+                <input type='email' class="form-control" id="email" placeholder="example@gmail.com" name='email'
+                    required>
+            </div>
+            <div>
+                <h2>PASSWORD:</h2>
+                <input type="password" class="form-control" id="password" placeholder="abc123!@#" name="password"
+                    required>
+            </div>
+            <input type="submit" class="form-control btn" id="signUp" name="signUp" value="SIGN UP">
+        </form>
     </div>
 </body>
 
