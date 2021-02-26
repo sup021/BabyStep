@@ -29,22 +29,26 @@
         </nav>
     </header>
 
-    <div class="container">
-        <h1>SIGN IN</h1>
-        <form action="/habit">
-            <div>
-                <h2>EMAIL:</h2>
-                <input type='email' class="form-control" id="email" placeholder="example@gmail.com" name='email'
-                    required>
-            </div>
-            <div>
-                <h2>PASSWORD:</h2>
-                <input type="password" class="form-control" id="password" placeholder="abc123!@#" name="password"
-                    required>
-            </div>
-            <input type="submit" class="form-control btn" id="signIn" name="signIn" value="SIGN IN">
-        </form>
-    </div>
-</body>
+   
+
+
+<div class="login-box">
+  <h1>SIGN IN</h1>
+  <form action="/habit">
+  <div class="textbox">
+    <i class="fas fa-user"></i>
+    <input type="email" placeholder="example@gmail.com" name='email' required>
+  </div>
+
+  <div class="textbox">
+    <i class="fas fa-lock"></i>
+    <input type="password" placeholder="Password" name="password" required>
+  </div>
+
+  <input type="submit" class="form-controlbtn" value="SIGN IN">
+</form>
+</div>
+  </body>
+
 
 </html>
