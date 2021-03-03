@@ -1,0 +1,196 @@
+{
+    "friendsData": [
+        {
+            "fname": "albert",
+            "lname": "roger",
+            "friend": "no",
+            "profile": "Male/boy1"
+        },
+        {
+            "fname": "alberta",
+            "lname": "einstein",
+            "friend": "no",
+            "profile": "Female/girl2"
+        },
+        {
+            "fname": "albert",
+            "lname": "jones",
+            "friend": "no",
+            "profile": "Male/boy3"
+        },
+        {
+            "fname": "kyle",
+            "lname": "lowry",
+            "friend": "no",
+            "profile": "Male/boy4"
+        },
+        {
+            "fname": "moira",
+            "lname": "rose",
+            "friend": "no",
+            "profile": "Female/girl5"
+        },
+        {
+            "fname": "james",
+            "lname": "lebron",
+            "friend": "no",
+            "profile": "Male/boy6"
+        },
+        {
+            "fname": "ronnie",
+            "lname": "kyles",
+            "friend": "no",
+            "profile": "Female/girl7"
+        },
+        {
+            "fname": "michael",
+            "lname": "lowry",
+            "friend": "no",
+            "profile": "Male/boy8"
+        },
+        {
+            "fname": "anton",
+            "lname": "lowry",
+            "friend": "no",
+            "profile": "Male/boy9"
+        },
+        {
+            "fname": "sarah",
+            "lname": "jenkins",
+            "friend": "no",
+            "profile": "Female/girl10"
+        },
+        {
+            "fname": "david",
+            "lname": "rose",
+            "friend": "no",
+            "profile": "Male/boy11"
+        },
+        {
+            "fname": "hermoine",
+            "lname": "weisley",
+            "friend": "yes",
+            "profile": "Female/girl12"
+        },
+        {
+            "fname": "monkey d.",
+            "lname": "luffy",
+            "friend": "no",
+            "profile": "Male/boy13"
+        },
+        {
+            "fname": "ally",
+            "lname": "way",
+            "friend": "no",
+            "profile": "Female/girl14"
+        },
+        {
+            "fname": "david",
+            "lname": "ronaldo",
+            "friend": "no",
+            "profile": "Male/boy15"
+        },
+        {
+            "fname": "doris",
+            "lname": "erledy",
+            "friend": "no",
+            "profile": "Female/girl16"
+        },
+        {
+            "fname": "sharnel",
+            "lname": "daroge",
+            "friend": "no",
+            "profile": "Female/girl1"
+        },
+        {
+            "fname": "aidan",
+            "lname": "applestein",
+            "friend": "no",
+            "profile": "Male/boy2"
+        },
+        {
+            "fname": "sharon",
+            "lname": "unfenly",
+            "friend": "no",
+            "profile": "Female/girl3"
+        },
+        {
+            "fname": "wonder",
+            "lname": "woman",
+            "friend": "no",
+            "profile": "Female/girl4"
+        },
+        {
+            "fname": "boyle",
+            "lname": "randy",
+            "friend": "no",
+            "profile": "Male/boy5"
+        },
+        {
+            "fname": "shakira",
+            "lname": "money",
+            "friend": "no",
+            "profile": "Female/girl6"
+        },
+        {
+            "fname": "christiano",
+            "lname": "ronaldo",
+            "friend": "no",
+            "profile": "Male/boy7"
+        },
+        {
+            "fname": "beyonce",
+            "lname": "humenty",
+            "friend": "no",
+            "profile": "Female/girl8"
+        },
+        {
+            "fname": "sky",
+            "lname": "blue",
+            "friend": "no",
+            "profile": "Female/girl9"
+        },
+        {
+            "fname": "leonardo",
+            "lname": "decaprio",
+            "friend": "no",
+            "profile": "Male/boy10"
+        },
+        {
+            "fname": "roronora",
+            "lname": "zoro",
+            "friend": "no",
+            "profile": "Female/girl11"
+        },
+        {
+            "fname": "leonardo",
+            "lname": "divinci",
+            "friend": "yes",
+            "profile": "Male/boy12"
+        },
+        {
+            "fname": "dora",
+            "lname": "jones",
+            "friend": "no",
+            "profile": "Female/girl13"
+        },
+        {
+            "fname": "jack",
+            "lname": "bandicoot",
+            "friend": "no",
+            "profile": "Male/boy14"
+        },
+        {
+            "fname": "kara",
+            "lname": "kent",
+            "friend": "no",
+            "profile": "Female/girl15"
+        },
+        {
+            "fname": "thor",
+            "lname": "ragnorak",
+            "friend": "no",
+            "profile": "Male/boy16"
+        }
+    ]
+}

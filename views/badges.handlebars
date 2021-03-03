@@ -1,0 +1,99 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Habit Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/friends.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+		<nav class="navbar navbar-fixed-top navbar-inverse">
+			<div class="container-fluid top">
+				<a class="navbar-brand" href="#" style="color: white;">Badges</a>
+			</div>
+		</nav>
+
+		<nav class="navbar navbar-fixed-bottom navbar-inverse">
+			<div class="container-fluid bottom">
+				<a class="navbar-brand" id="home" href="http://localhost:3000/habit"
+					style="color: white;">HABIT</a>
+				<a class="navbar-brand" id="setting" href="http://localhost:3000/badges"
+					style="color: white;">BADGES</a>
+				<a class="navbar-brand" id="setting" href="http://localhost:3000/friends"
+					style="color: white;">FRIENDS</a>
+				<a class="navbar-brand" id="setting" href="http://localhost:3000/setting"
+					style="color: white;">SETTING</a>
+			</div>
+		</nav>
+	</header>
+
+    <div class="badges"> 
+        <div>
+            <p>Friendship Achievements</p>
+            <img src={{badge1}} width='70' height='70' onclick="togglelock('1')" name={{badge1status}} class="icon1"/>
+            <img src={{badge9}} width='70' height='70' onclick="togglelock('2')" name={{badge9status}} class="icon9"/>
+            <img src={{badge13}} width='70' height='70' onclick="togglelock('3')" name={{badge13status}} class="icon13"/>
+        </div>
+
+        <div>
+            <p>Habit Progress Achievements</p>
+            <img src={{badge4}} width='70' height='70' onclick="togglelock('4')" name={{badge4status}} class="icon4"/>
+            <img src={{badge15}} width='70' height='70' onclick="togglelock('5')" name={{badge15status}} class="icon15"/>
+            <img src={{badge6}} width='70' height='70' onclick="togglelock('6')" name={{badge6status}} class="icon6"/>
+        </div>
+            <p>Social Support Achievements</p>
+            <img src={{badge11}} width='70' height='70' onclick="togglelock('7')" name={{badge11status}} class="icon11"/>
+            <img src={{badge5}} width='70' height='70' onclick="togglelock('8')" name={{badge5status}} class="icon5"/>
+        <div>
+            <p>Completed Habit Achievements</p>
+            <img src={{badge3}} width='70' height='70' onclick="togglelock('9')" name={{badge3status}} class="icon3"/>
+            <img src={{badge14}} width='70' height='70' onclick="togglelock('10')" name={{badge14status}} class="icon14"/>
+            <img src={{badge2}} width='70' height='70' onclick="togglelock('11')" name={{badge2status}} class="icon2"/>
+        </div>
+
+        <div>
+             <p>Team Habit Achievements</p>
+            <img src={{badge8}} width='70' height='70' onclick="togglelock('12')" name={{badge8status}} class="icon8"/>
+            <img src={{badge10}} width='70' height='70' onclick="togglelock('13')" name={{badge10status}} class="icon10"/>
+            <img src={{badge16}} width='70' height='70' onclick="togglelock('14')" name={{badge16status}} class="icon16"/>
+            <img src={{badge12}} width='70' height='70' onclick="togglelock('15')" name={{badge12status}} class="icon12"/>
+        </div>
+        
+        <div>
+            <p>Rate Us Achievement</p>
+            <img src={{badge7}} width='70' height='70' onclick="togglelock('16')" name={{badge7status}} class="icon7"/>
+        </div>
+
+    </div>
+
+
+<script>
+    function togglelock(icon_num) {
+
+        window.location.href = "http://localhost:3000/badges/" + icon_num;
+        //var icon = document.getElementsByClassName("badges")[0].getElementsByClassName(icon_num)[0];
+        //if (icon.name == "unlocked") {
+        //   icon.src = 'css/image/GreyBadgeIcons/icon' + icon_num + 'shaded.png';
+        //    icon.name = 'locked';
+        //} else {
+        //    icon.src = 'css/image/BadgeIcons/icon' + icon_num + '.png';
+        //   icon.name = 'unlocked';
+        //}
+    }
+</script>
+
+
+</body>
+
+</html>

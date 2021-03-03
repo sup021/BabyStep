@@ -15,17 +15,38 @@
 	<script src="/js/habitBack.js"></script>
 </head>
 
+<script>
+	window.onload = function () {
+    var url = document.location.href,
+        params = url.split('?'),
+        data = {}, tmp;
+    for (var i = 1, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+    }
+
+    if (data.isfriend == "yes") {
+		document.getElementById("friend_profile").innerHTML = "<img src='../css/image/" + data.profile + ".png' width='60' height='60' /><a style='color: white;font-size:80%'>&nbsp;&nbsp;" + data.name.split('%20')[0] + " " + data.name.split('%20')[1] + "'s profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><span style='color: green'>Friends</span>";
+	} else {
+		document.getElementById("friend_profile").innerHTML = "<img src='../css/image/" + data.profile + ".png' width='60' height='60' /><a style='color: white;font-size:80%'>&nbsp;&nbsp;" + data.name.split('%20')[0] + " " + data.name.split('%20')[1] + "'s profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><span style='color: red'>Not Friends</span>";
+	}
+
+	document.getElementById("habitName").textContent = data.name.split('%20')[0] + " " + data.name.split('%20')[1] + "'s habit";
+	document.getElementById("babystep").textContent = data.name.split('%20')[0] + " " + data.name.split('%20')[1] + "'s Baby Step for this Habit";
+
+}
+</script>
+
 <body>
 	<header>
 		<nav class="navbar navbar-fixed-top navbar-inverse">
-			<div class="container-fluid top">
-				<a class="navbar-brand" href="#" style="color: white;">MY HABITS</a>
-				<button class="btn navbar-toggle navbar-right" type="button"
-					onclick="location.href='http://a6-babystep.herokuapp.com/createHabit'">
-					<span style="color: white">
-						<i class="fas fa-plus"></i>
-					</span>
-				</button>
+			<button class="btn navbar-toggle navbar-right" type="button"
+				onclick="location.href='http://localhost:3000/friends'">
+				<span style="color: white">
+					<i class="fas fa-times"></i>
+				</span>
+			</button>
+			<div class="container-fluid top" id='friend_profile'>
 			</div>
 		</nav>
 
@@ -44,10 +65,9 @@
 	</header>
 
 	<div class="container">
-		{{#each habitData}}
-		<div class="habitbox" id="{{hname}}">
+		<div class="habitbox" id="habit">
 			<div class="thumbnail">
-				<h2 class="habitName">{{hname}}</h2>
+				<h2 class="habitName" id="habitName"></h2>
 
 				{{!-- <button onclick="location.href='http://localhost:3000/habitDetails'" type="button"
 					class="btn threedots">
@@ -67,17 +87,18 @@
 				</div>
 
 				<hr class="divider">
-				<p class="babystep">{{step}}</p>
+				<p class="babystep" id="babystep"></p>
 				<div class="days">
-					{{#each occ}}
-					<input type="checkbox" class="cb" id="{{this}}{{@index}}" name="{{this}}" value="{{this}}">
-					<label for="{{this}}{{@index}}">{{this}}</label>
-					{{/each}}
+					<input type="checkbox" class="cb" id="1" name="Monday" value="Monday">
+					<label for="1">Mon</label>
+					<input type="checkbox" class="cb" id="3" name="Wednesday" value="Wednesday">
+					<label for="3">Wed</label>
+					<input type="checkbox" class="cb" id="5" name="Friday" value="Friday">
+					<label for="5">Fri</label>
 				</div>
-				<p class="reminder">{{time}}</p>
+				<p class="reminder">11:00</p>
 			</div>
 		</div>
-		{{/each}}
 	</div>
 </body>
 

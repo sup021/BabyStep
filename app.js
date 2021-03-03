@@ -16,6 +16,26 @@ var habitDetails = require('./routes/habitDetails');
 var createHabit = require('./routes/createHabit');
 var setting = require('./routes/setting');
 var help = require('./routes/help');
+var friends = require('./routes/friends');
+var badges = require('./routes/badges');
+var friendsHabits = require('./routes/friendsHabits')
+var badge1 = require('./routes/badge1');
+var badge2 = require('./routes/badge2');
+var badge3 = require('./routes/badge3');
+var badge4 = require('./routes/badge4');
+var badge5 = require('./routes/badge5');
+var badge6 = require('./routes/badge6');
+var badge7 = require('./routes/badge7');
+var badge8 = require('./routes/badge8');
+var badge9 = require('./routes/badge9');
+var badge10 = require('./routes/badge10');
+var badge11 = require('./routes/badge11');
+var badge12 = require('./routes/badge12');
+var badge13 = require('./routes/badge13');
+var badge14 = require('./routes/badge14');
+var badge15 = require('./routes/badge15');
+var badge16 = require('./routes/badge16');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -51,6 +71,27 @@ app.get('/habitDetails', habitDetails.view);
 app.get('/habitDetails/change', habitDetails.change);
 app.get('/setting', setting.view);
 app.get('/help', help.view);
+app.get('/friends', friends.view);
+app.get('/badges',badges.view);
+app.get('/friends/habits', friendsHabits.view);
+app.get('/badges/1', badge1.view);
+app.get('/badges/2', badge2.view);
+app.get('/badges/3', badge3.view);
+app.get('/badges/4', badge4.view);
+app.get('/badges/5', badge5.view);
+app.get('/badges/6', badge6.view);
+app.get('/badges/7', badge7.view);
+app.get('/badges/8', badge8.view);
+app.get('/badges/9', badge9.view);
+app.get('/badges/10', badge10.view);
+app.get('/badges/11', badge11.view);
+app.get('/badges/12', badge12.view);
+app.get('/badges/13', badge13.view);
+app.get('/badges/14', badge14.view);
+app.get('/badges/15', badge15.view);
+app.get('/badges/16', badge16.view);
+
+
 
 // Example route
 // app.get('/users', user.list);
