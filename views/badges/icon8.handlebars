@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Habit Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/friends.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+		<nav class="navbar navbar-fixed-top navbar-inverse">
+			<div class="container-fluid top">
+				<a class="navbar-brand" href="#" style="color: white;">Badges</a>
+                <button class="btn navbar-toggle navbar-right" type="button"
+                    onclick="location.href='http://localhost:3000/badges'">
+                    <span style="color: white">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </button>
+			</div>
+		</nav>
+
+		<nav class="navbar navbar-fixed-bottom navbar-inverse">
+			<div class="container-fluid bottom">
+				<a class="navbar-brand" id="home" href="http://localhost:3000/habit"
+					style="color: white;">HABIT</a>
+				<a class="navbar-brand" id="setting" href="http://localhost:3000/badges"
+					style="color: white;">BADGES</a>
+				<a class="navbar-brand" id="setting" href="http://localhost:3000/friends"
+					style="color: white;">FRIENDS</a>
+				<a class="navbar-brand" id="setting" href="http://localhost:3000/setting"
+					style="color: white;">SETTING</a>
+			</div>
+		</nav>
+	</header>
+
+    <style>
+      .badges{
+        text-align: center;
+      }
+    </style>
+    <div class="badges"> 
+        <div>
+            <p><h2><b>Social Support Achievements</b></h2></p>
+            <img src="../{{badge5}}" width='200' height='200' name={{badge5status}} class="icon1"/>
+            <p><h1>Oprah Winfrey Badge</h1></p>
+			<p><h2>This Badge is earned by liking atleast 100 friend habits ("You get a like! You get a like! You all get likes!")</h2></p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

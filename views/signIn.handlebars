@@ -3,52 +3,51 @@
 <html>
 
 <head>
-    <title>Sign In Page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="/css/signIn.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
+  <title>Sign In Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="/css/signIn.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-fixed-top navbar-inverse">
-            <div class="container-fluid top">
-                <a class="navbar-brand" href="#" style="color: white;">BABYSTEP</a>
-                <button class="btn navbar-toggle navbar-right" type="button"
-                    onclick="location.href='http://a6-babystep.herokuapp.com/'">
-                    <span style="color: white">
-                        <i class="fas fa-times"></i>
-                    </span>
-                </button>
-            </div>
-        </nav>
-    </header>
-
-   
+  <header>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid top">
+        <a class="navbar-brand" href="#" style="color: white;">BABYSTEP</a>
+        <button class="btn navbar-toggle navbar-right" type="button" onclick="location.href='http://localhost:3000/'">
+          <span style="color: white">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
 
-<div class="login-box">
-  <h1>SIGN IN</h1>
-  <form action="/habit">
-  <div class="textbox">
-    <i class="fas fa-user"></i>
-    <input type="email" placeholder="example@gmail.com" name='email' required>
+
+
+  <div class="login-box">
+    <h1>SIGN IN</h1>
+    <form action="/habit">
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="email" placeholder="example@gmail.com" name='email' required>
+      </div>
+
+      <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" name="password" required>
+      </div>
+
+      <input type="submit" class="form-controlbtn" value="SIGN IN">
+    </form>
   </div>
-
-  <div class="textbox">
-    <i class="fas fa-lock"></i>
-    <input type="password" placeholder="Password" name="password" required>
-  </div>
-
-  <input type="submit" class="form-controlbtn" value="SIGN IN">
-</form>
-</div>
-  </body>
+</body>
 
 
 </html>

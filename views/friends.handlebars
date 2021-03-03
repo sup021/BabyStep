@@ -1,0 +1,331 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Habit Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/friends.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            #myInput {
+                background-position: 10px 10px;
+                background-repeat: no-repeat;
+                width: 100%;
+                font-size: 16px;
+                padding: 12px 20px 12px 40px;
+                border: 1px solid #ddd;
+                margin-bottom: 12px;
+            }
+
+            #myTable {
+                border-collapse: collapse;
+                width: 100%;
+                border: 1px solid #ddd;
+                font-size: 18px;
+            }
+
+            #myTable th,
+            #myTable td {
+                text-align: left;
+                padding: 12px;
+            }
+
+            #myTable tr {
+                border-bottom: 1px solid #ddd;
+            }
+
+            #myTable tr.header,
+            #myTable tr:hover {
+                background-color: #f1f1f1;
+            }
+        </style>
+    </head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container-fluid top">
+                <a class="navbar-brand" href="#" style="color: white;">Search Friends</a>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-fixed-bottom navbar-inverse">
+            <div class="container-fluid bottom">
+                <a class="navbar-brand" id="habit" href="http://localhost:3000/habit" style="color: white;">HABIT</a>
+                <a class="navbar-brand" id="badges" href="http://localhost:3000/badges" style="color: white;">BADGES</a>
+                <a class="navbar-brand" id="friends" href="http://localhost:3000/friends"
+                    style="color: white;">FRIENDS</a>
+                <a class="navbar-brand" id="setting" href="http://localhost:3000/setting"
+                    style="color: white;">SETTING</a>
+            </div>
+        </nav>
+    </header>
+    <!--{{#each friendsData}}{{fname}} {{lname}},{{profile}},{{friend}},{{/each}} end -->
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    <div style="height:500px;overflow:auto;" id="friends_list">
+
+
+
+        <script>
+
+            friendsData = [
+                {
+                    "fname": "albert",
+                    "lname": "roger",
+                    "friend": "no",
+                    "profile": "Male/boy1"
+                },
+                {
+                    "fname": "alberta",
+                    "lname": "einstein",
+                    "friend": "no",
+                    "profile": "Female/girl2"
+                },
+                {
+                    "fname": "albert",
+                    "lname": "jones",
+                    "friend": "no",
+                    "profile": "Male/boy3"
+                },
+                {
+                    "fname": "kyle",
+                    "lname": "lowry",
+                    "friend": "no",
+                    "profile": "Male/boy4"
+                },
+                {
+                    "fname": "moira",
+                    "lname": "rose",
+                    "friend": "no",
+                    "profile": "Female/girl5"
+                },
+                {
+                    "fname": "james",
+                    "lname": "lebron",
+                    "friend": "no",
+                    "profile": "Male/boy6"
+                },
+                {
+                    "fname": "ronnie",
+                    "lname": "kyles",
+                    "friend": "no",
+                    "profile": "Female/girl7"
+                },
+                {
+                    "fname": "michael",
+                    "lname": "lowry",
+                    "friend": "no",
+                    "profile": "Male/boy8"
+                },
+                {
+                    "fname": "anton",
+                    "lname": "lowry",
+                    "friend": "no",
+                    "profile": "Male/boy9"
+                },
+                {
+                    "fname": "sarah",
+                    "lname": "jenkins",
+                    "friend": "no",
+                    "profile": "Female/girl10"
+                },
+                {
+                    "fname": "david",
+                    "lname": "rose",
+                    "friend": "no",
+                    "profile": "Male/boy11"
+                },
+                {
+                    "fname": "hermoine",
+                    "lname": "weisley",
+                    "friend": "yes",
+                    "profile": "Female/girl12"
+                },
+                {
+                    "fname": "monkey d.",
+                    "lname": "luffy",
+                    "friend": "no",
+                    "profile": "Male/boy13"
+                },
+                {
+                    "fname": "ally",
+                    "lname": "way",
+                    "friend": "no",
+                    "profile": "Female/girl14"
+                },
+                {
+                    "fname": "david",
+                    "lname": "ronaldo",
+                    "friend": "no",
+                    "profile": "Male/boy15"
+                },
+                {
+                    "fname": "doris",
+                    "lname": "erledy",
+                    "friend": "no",
+                    "profile": "Female/girl16"
+                },
+                {
+                    "fname": "sharnel",
+                    "lname": "daroge",
+                    "friend": "no",
+                    "profile": "Female/girl1"
+                },
+                {
+                    "fname": "aidan",
+                    "lname": "applestein",
+                    "friend": "no",
+                    "profile": "Male/boy2"
+                },
+                {
+                    "fname": "sharon",
+                    "lname": "unfenly",
+                    "friend": "no",
+                    "profile": "Female/girl3"
+                },
+                {
+                    "fname": "wonder",
+                    "lname": "woman",
+                    "friend": "no",
+                    "profile": "Female/girl4"
+                },
+                {
+                    "fname": "boyle",
+                    "lname": "randy",
+                    "friend": "no",
+                    "profile": "Male/boy5"
+                },
+                {
+                    "fname": "shakira",
+                    "lname": "money",
+                    "friend": "no",
+                    "profile": "Female/girl6"
+                },
+                {
+                    "fname": "christiano",
+                    "lname": "ronaldo",
+                    "friend": "no",
+                    "profile": "Male/boy7"
+                },
+                {
+                    "fname": "beyonce",
+                    "lname": "humenty",
+                    "friend": "no",
+                    "profile": "Female/girl8"
+                },
+                {
+                    "fname": "sky",
+                    "lname": "blue",
+                    "friend": "no",
+                    "profile": "Female/girl9"
+                },
+                {
+                    "fname": "leonardo",
+                    "lname": "decaprio",
+                    "friend": "no",
+                    "profile": "Male/boy10"
+                },
+                {
+                    "fname": "roronora",
+                    "lname": "zoro",
+                    "friend": "no",
+                    "profile": "Female/girl11"
+                },
+                {
+                    "fname": "leonardo",
+                    "lname": "divinci",
+                    "friend": "yes",
+                    "profile": "Male/boy12"
+                },
+                {
+                    "fname": "dora",
+                    "lname": "jones",
+                    "friend": "no",
+                    "profile": "Female/girl13"
+                },
+                {
+                    "fname": "jack",
+                    "lname": "bandicoot",
+                    "friend": "no",
+                    "profile": "Male/boy14"
+                },
+                {
+                    "fname": "kara",
+                    "lname": "kent",
+                    "friend": "no",
+                    "profile": "Female/girl15"
+                },
+                {
+                    "fname": "thor",
+                    "lname": "ragnorak",
+                    "friend": "no",
+                    "profile": "Male/boy16"
+                }
+            ];
+
+            function myFunction() {
+                var input, filter, friends, friendsbool;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                friends = friendsData;
+                friendsbool = [];
+
+                for (i = 0; i < friends.length; i++) {
+                    td = ((friends[i].fname + " " + friends[i].lname).toUpperCase().includes(filter));
+                    if (td) {
+                        friendsbool.push([friends[i].fname + ' ' + friends[i].lname, friends[i].friend, i, friends[i].profile]);
+                    }
+                }
+
+                var select = document.getElementById("friends_list");
+
+                select.innerHTML = friendsbool.map(function (option) {
+                    if (option[1] == "no") {
+                        return "<div class='thumbnail'><button type='button' class='btn btn-default btn-sm' style='float: right;' onclick='toggle(" + option[2] + ")' id=" + option[2] + "><span style='color: green'>Add Friend</span></button><div id=profile" + option[2] + "><img onclick='seeProfile(\"" + option[0] + "\",\"" + option[1] + "\",\"" + option[3] + "\")' src='css/image/" + option[3] + ".png' width='70' height='70' />" + option[0] + "</div></div>";
+                    } else {
+                        return "<div class='thumbnail'><button type='button' class='btn btn-default btn-sm' style='float: right;' onclick='toggle(" + option[2] + ")' id=" + option[2] + "><span style='color: red'>Remove Friend</span></button><div id=profile" + option[2] + "><img onclick='seeProfile(\"" + option[0] + "\",\"" + option[1] + "\",\"" + option[3] + "\")' src='css/image/" + option[3] + ".png' width='70' height='70' />" + option[0] + "</div></div>";
+                    }
+
+
+                }).join("");
+            }
+
+            function toggle(identify) {
+                var friends = friendsData;
+                var text = document.getElementById(identify);
+                var proftext = document.getElementById('profile' + identify);
+                if (text.textContent == "Add Friend") {
+                    text.textContent = "Remove Friend";
+                    friends[identify].friend = "yes";
+                    text.style = 'float: right; color: red';
+                    proftext.innerHTML = "<img onclick='seeProfile(\"" + friends[identify].fname + " " + friends[identify].lname + "\",\"" + friends[identify].friend + "\",\"" + friends[identify].profile + "\")' src='css/image/" + friends[identify].profile + ".png' width='70' height='70' />" + friends[identify].fname + " " + friends[identify].lname;
+                } else {
+                    text.textContent = "Add Friend";
+                    friends[identify].friend = "no";
+                    text.style = 'float: right; color: green';
+                    proftext.innerHTML = "<img onclick='seeProfile(\"" + friends[identify].fname + " " + friends[identify].lname + "\",\"" + friends[identify].friend + "\",\"" + friends[identify].profile + "\")' src='css/image/" + friends[identify].profile + ".png' width='70' height='70' />" + friends[identify].fname + " " + friends[identify].lname;
+                }
+            }
+
+            function seeProfile(name, isfriend, profile) {
+                window.location.href = "http://localhost:3000/friends/habits?name=" + name + "?isfriend=" + isfriend + "?profile=" + profile;
+            }
+        </script>
+
+
+</body>
+
+</html>

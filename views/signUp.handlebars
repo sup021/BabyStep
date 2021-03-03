@@ -20,7 +20,7 @@
             <div class="container-fluid top">
                 <a class="navbar-brand" href="#" style="color: white;">BABYSTEP</a>
                 <button class="btn navbar-toggle navbar-right" type="button"
-                    onclick="location.href='http://a6-babystep.herokuapp.com/'">
+                    onclick="location.href='http://localhost:3000/'">
                     <span style="color: white">
                         <i class="fas fa-times"></i>
                     </span>
@@ -29,20 +29,20 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="login-box">
         <h1>SIGN UP</h1>
         <form action="/habit">
-            <div>
-                <h2>EMAIL:</h2>
-                <input type='email' class="form-control" id="email" placeholder="example@gmail.com" name='email'
-                    required>
+            <div class="textbox">
+                <i class="fas fa-user"></i>
+                <input type="email" placeholder="example@gmail.com" name='email' required>
             </div>
-            <div>
-                <h2>PASSWORD:</h2>
-                <input type="password" class="form-control" id="password" placeholder="abc123!@#" name="password"
-                    required>
+
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" name="password" required>
             </div>
-            <input type="submit" class="form-control btn" id="signUp" name="signUp" value="SIGN UP">
+
+            <input type="submit" class="form-controlbtn" value="SIGN UP">
         </form>
     </div>
 </body>
