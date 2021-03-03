@@ -2,7 +2,7 @@
 body{
   padding-top: 70px;
   font-family: sans-serif;
-  background: url(bg.jpg) no-repeat;
+  background: url(../images/bg.jpg) no-repeat;
   background-size: cover;
 }
 .login-box{

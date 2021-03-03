@@ -12,7 +12,7 @@ var onboarding = require('./routes/onboarding');
 var signIn = require('./routes/signIn');
 var signUp = require('./routes/signUp');
 var habit = require('./routes/habit');
-var habitDetails = require('./routes/habitDetails');
+var editHabit = require('./routes/editHabit');
 var createHabit = require('./routes/createHabit');
 var setting = require('./routes/setting');
 var help = require('./routes/help');
@@ -45,10 +45,12 @@ app.get('/', onboarding.view);
 app.get('/signIn', signIn.view);
 app.get('/signUp', signUp.view);
 app.get('/habit', habit.view);
+app.get('/habit/delete/:index', habit.delete);
 app.get('/createHabit', createHabit.view);
 app.get('/createHabit/success', createHabit.create)
-app.get('/habitDetails', habitDetails.view);
-app.get('/habitDetails/change', habitDetails.change);
+app.get('/editHabit/:index', editHabit.view);
+app.get('/editHabit/:index/success', editHabit.save);
+app.get('/editHabit/JSON/:index', editHabit.postJSON);
 app.get('/setting', setting.view);
 app.get('/help', help.view);
 

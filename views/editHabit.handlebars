@@ -3,23 +3,23 @@
 <html>
 
 <head>
-    <title>Habit Details Page</title>
+    <title>Edit Habity Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="/css/habitDetails.css" rel="stylesheet">
+    <link href="/css/editHabit.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
-    <script src="/js/habitDetailsBack.js"></script>
+    <script src="/js/editHabitBack.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-fixed-top navbar-inverse">
             <div class="container-fluid top">
-                <a class="navbar-brand" href="#" style="color: white;">MODIFY HABIT</a>
+                <a class="navbar-brand" href="#" style="color: white;">EDIT HABIT</a>
                 <button class="btn navbar-toggle navbar-right" type="button"
                     onclick="location.href='http://localhost:3000/habit'">
                     <span style="color: white">
@@ -31,18 +31,18 @@
     </header>
 
     <div class="container">
-        <form id="habitDetailsForm" role="form" method="get" action="/habitDetails/success">
+        <form id="editHabitForm" role="form" method="get" action="{{index}}/success">
             <div class="form-group">
                 <label for="hname">
                     <h2>Habit Name:</h2>
                 </label>
-                <input type='text' class="form-control" id="hname" placeholder="ex) Running" name='hname'>
+                <input type='text' class="form-control" id="hname" name='hname' value="{{hname}}">
             </div>
             <div class="form-group">
                 <label for="step">
                     <h2>First Baby Step:</h2>
                 </label>
-                <input type="text" class="form-control" id="step" placeholder="ex) 5 minute walking" name="step">
+                <input type="text" class="form-control" id="step" name="step" value="{{step}}">
             </div>
             <div class="form-group">
                 <label for="occ">
@@ -70,10 +70,9 @@
                 <label for="time">
                     <h2>Remind me at:</h2>
                 </label>
-                <input type="time" name="time">
+                <input type="time" name="time" value="{{time}}">
             </div>
             <input class="btn" id="saveBtn" type="submit" name="save" value="SAVE">
-            <input class="btn" id="deleteBtn" type="submit" name="delete" value="DELETE">
         </form>
     </div>
 

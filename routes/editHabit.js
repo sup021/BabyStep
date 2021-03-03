@@ -1,13 +1,26 @@
 var habitData = require('../habitData.json');
 /*
- * GET habit details page.
+ * GET edit habit page.
  */
 
 exports.view = function (req, res) {
-    res.render('habitDetails');
+    var index = req.params.index;
+    var habitInfo = habitData.habitData[index];
+    res.render('editHabit', {
+        "index": index,
+        "hname": habitInfo.hname,
+        "step": habitInfo.step,
+        "time": habitInfo.time
+    });
 };
 
-exports.change = function (req, res) {
+exports.postJSON = function (req, res) {
+    var index = req.params.index;
+    var habitInfo = habitData.habitData[index];
+    res.json(habitInfo);
+};
+
+exports.save = function (req, res) {
     var hname = req.query.hname;
     var step = req.query.step;
     var occ = [];
@@ -34,6 +47,8 @@ exports.change = function (req, res) {
         "time": time
     };
     console.log(newHabit);
-    habitData.habitData.push(newHabit);
+
+    var index = req.params.index;
+    habitData.habitData[index] = newHabit;
     res.render('habit', habitData);
 };

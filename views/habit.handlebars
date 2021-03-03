@@ -21,7 +21,7 @@
 			<div class="container-fluid top">
 				<a class="navbar-brand" href="#" style="color: white;">HABIT</a>
 				<button class="btn navbar-toggle navbar-right" type="button"
-					onclick="location.href='http://a6-babystep.herokuapp.com/createHabit'">
+					onclick="location.href='http://localhost:3000/createHabit'">
 					<span style="color: white">
 						<i class="fas fa-plus"></i>
 					</span>
@@ -56,9 +56,9 @@
 						<i class="fas fa-ellipsis-v"></i>
 					</button>
 					<ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
-						<li><a class="edit" href="#" onclick="alert('Edit feature coming soon!');">EDIT</a></li>
+						<li><a class="edit" href="http://localhost:3000/editHabit/{{@index}}">EDIT</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a class="delete" href="#" onclick="alert('Delete feature coming soon!');">DELETE</a></li>
+						<li><a class="delete" href="http://localhost:3000/habit/delete/{{@index}}">DELETE</a></li>
 					</ul>
 				</div>
 

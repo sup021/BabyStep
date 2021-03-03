@@ -46,13 +46,3 @@ input:focus, textarea:focus{
     align-items: center;
     justify-content: center;
 }
-
-#deleteBtn {
-    width: 60vw;
-    height: 50px;
-    margin: auto;
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
