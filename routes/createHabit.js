@@ -35,5 +35,6 @@ exports.create = function (req, res) {
     };
     console.log(newHabit);
     habitData.habitData.push(newHabit);
+    habitData.viewEmpty = false;
     res.render('habit', habitData);
 };

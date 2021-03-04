@@ -42,6 +42,9 @@
 	</header>
 
 	<div class="container">
+		{{#if viewEmpty}}
+		<h2 class="empty">No Habit Yet!</h2>
+		{{else}}
 		{{#each habitData}}
 		<div class="habitbox" id="{{hname}}">
 			<div class="thumbnail">
@@ -76,6 +79,7 @@
 			</div>
 		</div>
 		{{/each}}
+		{{/if}}
 	</div>
 </body>
 

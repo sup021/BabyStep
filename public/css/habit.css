@@ -8,6 +8,14 @@ body {
     padding-bottom: 70px;
 }
 
+h2.empty {
+    min-height: 80vh;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
 h2.habitName {
     display: inline-block;
     margin-top: 10px;

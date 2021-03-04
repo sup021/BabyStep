@@ -1,5 +1,7 @@
 'use strict';
 
+var numRecommend = 0;
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function () {
     initializePage();
@@ -9,6 +11,8 @@ $(document).ready(function () {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+    numRecommend = 0;
+    $("#recommend").click(recommend);
     $("body").on("click", ".days label", function (e) {
         var getValue = $(this).attr("for");
         var goToParent = $(this).parents(".days");
@@ -16,6 +20,19 @@ function initializePage() {
         console.log(getInputCheckBox.attr("id"));
     });
     requiredCB();
+}
+
+function recommend() {
+    var getValue = $("#hname").val();
+    if (numRecommend === 0) {
+        $("#step").attr("value", "10 minute " + getValue);
+        numRecommend++;
+    } else if (numRecommend === 1) {
+        $("#step").attr("value", "5 minute " + getValue);
+        numRecommend++;
+    } else {
+        $("#step").attr("value", "1 minute " + getValue);
+    }
 }
 
 function requiredCB() {
