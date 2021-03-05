@@ -45,7 +45,7 @@ function initializePage() {
         if (getInputCheckBox.attr("checked") === undefined) {
             console.log("aaa");
             getInputCheckBox.attr("checked", "checked");
-            $(this).css("background", "rgb(16, 119, 253)");
+            $(this).css("background", "#af92ff");
             $(this).css("color", "white");
             if (firstStep == 'false') {
                 localStorage.setItem('firstStep', 'true');

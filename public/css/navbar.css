@@ -1,0 +1,10 @@
+.navbar-inverse {
+    background-image: linear-gradient(to bottom,#af92ff 0,#af92ff 100%);
+    background-repeat: repeat-x;
+    background-color: #af92ff;
+    border-color: #af92ff;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: transparent;
+}

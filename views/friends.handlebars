@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/navbar.css" rel="stylesheet">
     <link href="/css/friends.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
@@ -58,18 +59,35 @@
     <header>
         <nav class="navbar navbar-fixed-top navbar-inverse">
             <div class="container-fluid top">
-                <a class="navbar-brand" href="#" style="color: white;">Search Friends</a>
+                <a class="navbar-brand" href="#" style="color: white;">SEARCH FRIENDS</a>
             </div>
         </nav>
 
         <nav class="navbar navbar-fixed-bottom navbar-inverse">
             <div class="container-fluid bottom">
-                <a class="navbar-brand" id="habit" href="http://localhost:3000/habit" style="color: white;">HABIT</a>
-                <a class="navbar-brand" id="badges" href="http://localhost:3000/badges" style="color: white;">BADGES</a>
-                <a class="navbar-brand" id="friends" href="http://localhost:3000/friends"
-                    style="color: white;">FRIENDS</a>
-                <a class="navbar-brand" id="setting" href="http://localhost:3000/setting"
-                    style="color: white;">SETTING</a>
+                <a class="navbar-brand" id="habit" href="http://a7-babystep.herokuapp.com/habit" style="color: white;">
+                    <span style="color: white">
+                        <i class="fas fa-home fa-2x"></i>
+                    </span>
+                </a>
+                <a class="navbar-brand" id="badges" href="http://a7-babystep.herokuapp.com/badges"
+                    style="color: white;">
+                    <span style="color: white">
+                        <i class="fas fa-trophy fa-2x"></i>
+                    </span>
+                </a>
+                <a class="navbar-brand" id="friends" href="http://a7-babystep.herokuapp.com/friends"
+                    style="color: white;">
+                    <span style="color: white">
+                        <i class="fas fa-user-friends fa-2x"></i>
+                    </span>
+                </a>
+                <a class="navbar-brand" id="setting" href="http://a7-babystep.herokuapp.com/setting"
+                    style="color: white;">
+                    <span style="color: white">
+                        <i class="fas fa-cog fa-2x"></i>
+                    </span>
+                </a>
             </div>
         </nav>
     </header>
@@ -95,7 +113,7 @@
                     "profile": "Female/girl2"
                 },
                 {
-                    "fname": "albert",
+                    "fname": "al",
                     "lname": "jones",
                     "friend": "no",
                     "profile": "Male/boy3"
@@ -151,7 +169,7 @@
                 {
                     "fname": "hermoine",
                     "lname": "weisley",
-                    "friend": "yes",
+                    "friend": "no",
                     "profile": "Female/girl12"
                 },
                 {
@@ -167,7 +185,7 @@
                     "profile": "Female/girl14"
                 },
                 {
-                    "fname": "david",
+                    "fname": "dave",
                     "lname": "ronaldo",
                     "friend": "no",
                     "profile": "Male/boy15"
@@ -247,7 +265,7 @@
                 {
                     "fname": "leonardo",
                     "lname": "divinci",
-                    "friend": "yes",
+                    "friend": "no",
                     "profile": "Male/boy12"
                 },
                 {
@@ -293,7 +311,8 @@
                 var select = document.getElementById("friends_list");
 
                 select.innerHTML = friendsbool.map(function (option) {
-                    if (option[1] == "no") {
+                    if (localStorage.getItem(option[3]) != 'true') {
+                        console.log(option[3]);
                         return "<div class='thumbnail'><button type='button' class='btn btn-default btn-sm' style='float: right;' onclick='toggle(" + option[2] + ")' id=" + option[2] + "><span style='color: green'>Add Friend</span></button><div id=profile" + option[2] + "><img onclick='seeProfile(\"" + option[0] + "\",\"" + option[1] + "\",\"" + option[3] + "\")' src='css/image/" + option[3] + ".png' width='70' height='70' />" + option[0] + "</div></div>";
                     } else {
                         return "<div class='thumbnail'><button type='button' class='btn btn-default btn-sm' style='float: right;' onclick='toggle(" + option[2] + ")' id=" + option[2] + "><span style='color: red'>Remove Friend</span></button><div id=profile" + option[2] + "><img onclick='seeProfile(\"" + option[0] + "\",\"" + option[1] + "\",\"" + option[3] + "\")' src='css/image/" + option[3] + ".png' width='70' height='70' />" + option[0] + "</div></div>";
@@ -312,16 +331,24 @@
                     friends[identify].friend = "yes";
                     text.style = 'float: right; color: red';
                     proftext.innerHTML = "<img onclick='seeProfile(\"" + friends[identify].fname + " " + friends[identify].lname + "\",\"" + friends[identify].friend + "\",\"" + friends[identify].profile + "\")' src='css/image/" + friends[identify].profile + ".png' width='70' height='70' />" + friends[identify].fname + " " + friends[identify].lname;
+
+                    localStorage.setItem(friends[identify].profile, 'true');
+                    if (localStorage.getItem('firstFriend') == "false") {
+                        localStorage.setItem('firstFriend', 'true');
+                        alert('You unlocked the badge!');
+                    }
                 } else {
                     text.textContent = "Add Friend";
                     friends[identify].friend = "no";
                     text.style = 'float: right; color: green';
                     proftext.innerHTML = "<img onclick='seeProfile(\"" + friends[identify].fname + " " + friends[identify].lname + "\",\"" + friends[identify].friend + "\",\"" + friends[identify].profile + "\")' src='css/image/" + friends[identify].profile + ".png' width='70' height='70' />" + friends[identify].fname + " " + friends[identify].lname;
+
+                    localStorage.setItem(friends[identify].profile, 'false');
                 }
             }
 
             function seeProfile(name, isfriend, profile) {
-                window.location.href = "http://localhost:3000/friends/habits?name=" + name + "?isfriend=" + isfriend + "?profile=" + profile;
+                window.location.href = "http://a7-babystep.herokuapp.com/friends/habits?name=" + name + "?isfriend=" + isfriend + "?profile=" + profile;
             }
         </script>
 

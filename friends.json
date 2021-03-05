@@ -69,7 +69,7 @@
         {
             "fname": "hermoine",
             "lname": "weisley",
-            "friend": "yes",
+            "friend": "no",
             "profile": "Female/girl12"
         },
         {
@@ -165,7 +165,7 @@
         {
             "fname": "leonardo",
             "lname": "divinci",
-            "friend": "yes",
+            "friend": "no",
             "profile": "Male/boy12"
         },
         {

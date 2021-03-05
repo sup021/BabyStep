@@ -18,7 +18,7 @@ h3.or {
 }
 
 input#recommend {
-    background: #999;
+    background: #9f7ff8;
     color: #ffffff;
 }
 
@@ -44,7 +44,7 @@ input#recommend {
 #fri:checked ~ label[for="fri"],
 #sat:checked ~ label[for="sat"],
 #sun:checked ~ label[for="sun"] {
-  background: #999;
+  background: #af92ff;
   color: #ffffff;
 }
 
@@ -56,6 +56,6 @@ input#recommend {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(19, 18, 18);
+    background: #9f7ff8;
     color: white;
 }

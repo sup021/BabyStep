@@ -8,11 +8,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/navbar.css" rel="stylesheet">
 	<link href="/css/habit.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/610d507d86.js" crossorigin="anonymous"></script>
-	<script src="/js/habitBack.js"></script>
 </head>
 
 <script>
@@ -25,7 +25,7 @@
 			data[tmp[0]] = tmp[1];
 		}
 
-		if (data.isfriend == "yes") {
+		if (localStorage.getItem(data.profile) == "true") {
 			document.getElementById("friend_profile").innerHTML = "<img src='../css/image/" + data.profile + ".png' width='60' height='60' /><a style='color: white;font-size:80%'>&nbsp;&nbsp;" + data.name.split('%20')[0] + " " + data.name.split('%20')[1] + "'s profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><span style='color: green'>Friends</span>";
 		} else {
 			document.getElementById("friend_profile").innerHTML = "<img src='../css/image/" + data.profile + ".png' width='60' height='60' /><a style='color: white;font-size:80%'>&nbsp;&nbsp;" + data.name.split('%20')[0] + " " + data.name.split('%20')[1] + "'s profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><span style='color: red'>Not Friends</span>";
@@ -41,23 +41,12 @@
 	<header>
 		<nav class="navbar navbar-fixed-top navbar-inverse">
 			<button class="btn navbar-toggle navbar-right" type="button"
-				onclick="location.href='http://localhost:3000/friends'">
+				onclick="location.href='http://a7-babystep.herokuapp.com/friends'">
 				<span style="color: white">
 					<i class="fas fa-times"></i>
 				</span>
 			</button>
 			<div class="container-fluid top" id='friend_profile'>
-			</div>
-		</nav>
-
-		<nav class="navbar navbar-fixed-bottom navbar-inverse">
-			<div class="container-fluid bottom">
-				<a class="navbar-brand" id="habit" href="http://localhost:3000/habit" style="color: white;">HABIT</a>
-				<a class="navbar-brand" id="badges" href="http://localhost:3000/badges" style="color: white;">BADGES</a>
-				<a class="navbar-brand" id="friends" href="http://localhost:3000/friends"
-					style="color: white;">FRIENDS</a>
-				<a class="navbar-brand" id="setting" href="http://localhost:3000/setting"
-					style="color: white;">SETTING</a>
 			</div>
 		</nav>
 	</header>
@@ -71,18 +60,6 @@
 					class="btn threedots">
 					<i class="fas fa-ellipsis-v"></i>
 				</button> --}}
-
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle threedots" type="button" id="dropdownMenu1"
-						data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						<i class="fas fa-ellipsis-v"></i>
-					</button>
-					<ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
-						<li><a class="edit" href="#" onclick="alert('Edit feature coming soon!');">EDIT</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a class="delete" href="#" onclick="alert('Delete feature coming soon!');">DELETE</a></li>
-					</ul>
-				</div>
 
 				<hr class="divider">
 				<p class="babystep" id="babystep"></p>

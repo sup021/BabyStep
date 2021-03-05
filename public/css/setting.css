@@ -20,4 +20,7 @@ button {
     margin: auto;
     padding: 15px;
     width: 70vw;
+    background: #9f7ff8;
+    color: white;
+    border: 1px solid #ddd;
 }

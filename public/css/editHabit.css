@@ -33,7 +33,7 @@ input:focus, textarea:focus{
 #fri:checked ~ label[for="fri"],
 #sat:checked ~ label[for="sat"],
 #sun:checked ~ label[for="sun"] {
-  background: #999;
+  background: #af92ff;
   color: #ffffff;
 }
 
@@ -45,4 +45,6 @@ input:focus, textarea:focus{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #9f7ff8;
+    color: white;
 }
