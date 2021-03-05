@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-fixed-top navbar-inverse">
             <div class="container-fluid top">
-                <a class="navbar-brand" href="#" style="color: white;">HELP</a>
+                <a class="navbar-brand" href="#" style="color: white;">FAQ</a>
                 <button class="btn navbar-toggle navbar-right" type="button"
                     onclick="location.href='http://a7-babystep.herokuapp.com/setting'">
                     <span style="color: white">
@@ -30,55 +30,101 @@
         </nav>
     </header>
 
-    <div class="container">
-        <h1>FAQs</h1>
-        <h3>What does BabyStep do?</h3>
-        <ul>
-            <li>
-                BabyStep helps break down the ultimate habit you wish to achieve into small, easy steps and sets up a
-                reminder everyday to keep you on track.
-            </li>
-        </ul>
-        <h3>Is BabyStep free?</h3>
-        <ul>
-            <li>
-                Yes! BabyStep is completely free of charge! All you have to do is log in with your email address and
-                password.
-            </li>
-        </ul>
-        <h3>Will my information be used for other purposes?</h3>
-        <ul>
-            <li>
-                No! BabyStep keeps all your personal information confidential and it will only be used for internal
+<div class="wrapper">
+    <div class="parent-tab">
+      <input type="radio" name="tab" id="tab-1" checked>
+      <label for="tab-1">
+        <span>What does BabyStep do?</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>BabyStep helps break down the ultimate habit you wish to achieve into small, easy steps and sets up a
+                reminder everyday to keep you on track.</p>
+      </div>
+    </div>
+
+    
+    <div class="parent-tab">
+      <input type="radio" name="tab" id="tab-2">
+      <label for="tab-2">
+        <span>Is BabyStep free?</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>Yes! BabyStep is completely free of charge! All you have to do is sign up with your email address and
+                password. Facebook Sign In is also available to your interest!</p>
+      </div>
+    </div>
+
+
+<!-- Accordion Heading Four -->
+    <div class="parent-tab">
+      <input type="radio" name="tab" id="tab-6">
+      <label for="tab-6">
+        <span>Will my information be used for other purposes?</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>No! BabyStep keeps all your personal information confidential and it will only be used for internal
                 analytics to
-                help improve your experience with BabyStep.
-            </li>
-        </ul>
-        <h3>How do I add a new habit?</h3>
-        <ul>
-            <li>
-                All you need to do is go to the “Habit” page and click the “+” sign on the top right. From there, you
+                help improve your experience with BabyStep.</p>
+      </div>
+    </div>
+
+  
+    <div class="parent-tab tab-3">
+      <input type="radio" name="tab" id="tab-3">
+      <label for="tab-3" class="tab-3">
+        <span>How to start the BabyStep?</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <!-- Sub Heading One -->
+        <div class="child-tab">
+          <input type="checkbox" name="sub-tab" id="tab-4">
+          <label for="tab-4">
+            <span>How do I add a new habit?</span>
+            <div class="icon"><i class="fas fa-plus"></i></div>
+          </label>
+          <div class="sub-content">
+            <p>All you need to do is go to the “Habit” page and click the “+” sign on the top right. From there, you
                 will be
-                prompted to enter required information for the new habit!
-            </li>
-        </ul>
-        <h3>How do I see the detail of my habit?</h3>
-        <ul>
-            <li>
-                Locate the habit you wish to check details on and a simple click on it will do the magic!
-            </li>
-        </ul>
-        <h3>I set my baby step too hard to finish, what do I do?</h3>
-        <ul>
-            <li>
-                Don’t worry dear, BabyStep is all about starting your habit from small and easy steps! Simply locate the
+                prompted to enter required information for the new habit!</p>
+          </div>
+        </div>
+        <!-- Sub Heading Two -->
+        <div class="child-tab">
+          <input type="checkbox" name="sub-tab" id="tab-5">
+          <label for="tab-5">
+            <span>How do I see the detail of my habit?</span>
+            <div class="icon"><i class="fas fa-plus"></i></div>
+          </label>
+          <div class="sub-content">
+            <p>Locate the habit you wish to check details on and a simple click on it will do the magic!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion Heading Four -->
+    <div class="parent-tab">
+      <input type="radio" name="tab" id="tab-7">
+      <label for="tab-7">
+        <span>I set my baby step too hard to finish, what do I do?</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>Don’t worry dear, BabyStep is all about starting your habit from small and easy steps! Simply locate the
                 habit
                 you wish to change and click the edit button on the top right, from there , you can adjust the current
                 baby step
-                to your preference!
-            </li>
-        </ul>
+                to your preference!</p>
+      </div>
     </div>
+  </div>
+
+
+
 </body>
 
 </html>
