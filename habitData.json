@@ -1,29 +1,4 @@
 {
-    "habitData": [
-        {
-            "hname": "Running",
-            "step": "5 minute walking",
-            "occ": [
-                "mon",
-                "wed",
-                "fri"
-            ],
-            "time": "11:30"
-        },
-        {
-            "hname": "Leetcode",
-            "step": "1 easy problem",
-            "occ": [
-                "mon",
-                "tues",
-                "wed",
-                "thurs",
-                "fri",
-                "sat",
-                "sun"
-            ],
-            "time": "12:00"
-        }
-    ],
+    "habitData": [],
     "viewEmpty": true
 }

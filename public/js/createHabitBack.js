@@ -1,5 +1,6 @@
 'use strict';
 
+var firstHabit;
 var numRecommend = 0;
 
 // Call this function when the page loads (the "ready" event)
@@ -11,6 +12,7 @@ $(document).ready(function () {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+    checkFirstHabit();
     numRecommend = 0;
     $("#recommend").click(recommend);
     $("body").on("click", ".days label", function (e) {
@@ -20,6 +22,15 @@ function initializePage() {
         console.log(getInputCheckBox.attr("id"));
     });
     requiredCB();
+}
+
+function checkFirstHabit() {
+    firstHabit = localStorage.getItem('firstHabit');
+    if (firstHabit == 'false') {
+        localStorage.setItem('firstHabit', 'true');
+        firstHabit = 'true';
+        alert('You unlocked the badge!');
+    }
 }
 
 function recommend() {
