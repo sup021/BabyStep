@@ -9,5 +9,9 @@ body {
 }
 
 .description {
-    font-style: italic;
+    
+    font-size: large;
+    font-family: 'Bubblegum Sans', cursive;
+    color:#7B51FF;
 }
+
