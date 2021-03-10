@@ -23,11 +23,11 @@ function checkDays() {
     // Get the div ID, e.g., "project3"
     var currUrl = window.location.href;
     // get rid of 'project' from the front of the id 'project3'
-    var index = currUrl.substr('http://a7-babystep.herokuapp.com/editHabit/'.length);
+    var index = currUrl.substr('http://a8-babystep.herokuapp.com/editHabit/'.length);
 
     console.log("User clicked on json " + index);
 
-    var url = $.get("http://a7-babystep.herokuapp.com/editHabit/JSON/" + index, callBackFn);
+    var url = $.get("http://a8-babystep.herokuapp.com/editHabit/JSON/" + index, callBackFn);
 }
 
 function callBackFn(result) {

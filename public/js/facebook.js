@@ -14,6 +14,6 @@ function statusChangeCallback(response) {
     if (response.status === 'connected') {
         // Logged into your app and Facebook.
         console.log('Successfully logged in with Facebook');
-        window.location.href = "http://a7-babystep.herokuapp.com/habit";
+        window.location.href = "http://a8-babystep.herokuapp.com/habit";
     }
 }
